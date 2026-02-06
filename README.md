@@ -16,19 +16,19 @@ Passwords can be stolen, and fingerprints can be forged. This project introduces
 Leveraging an **Arduino Uno** for data acquisition and **Python** for complex signal processing, this system captures real-time ECG data, filters noise, and compares it against a secure database of reference signals using statistical correlation.
 
 **Key Metrics:**
-* [cite_start]**Accuracy:** ~95% in simulated scenarios[cite: 286].
-* [cite_start]**Processing Time:** ~0.5 seconds per segment[cite: 285].
-* [cite_start]**Sampling Rate:** 250 Hz[cite: 277].
+* **Accuracy:** ~95% in simulated scenarios.
+* **Processing Time:** ~0.5 seconds per segment.
+* **Sampling Rate:** 250 Hz.
 
 ---
 
 ## 🌟 Key Features
 
-* [cite_start]**Real-Time Acquisition:** Live streaming of cardiac data from the AD8232 sensor to Python via Serial communication[cite: 277].
-* [cite_start]**Signal Preprocessing:** Implementation of **Median Filtering (Kernel size: 5)** to remove baseline wander and muscle artifacts[cite: 278].
-* [cite_start]**Dynamic Normalization:** Standardizes signal amplitudes to ensuring accurate comparison regardless of sensor contact pressure[cite: 278].
-* [cite_start]**Correlation Algorithm:** Uses **Pearson Correlation Coefficients** to determine similarity scores with a strict threshold of **0.80**[cite: 280].
-* [cite_start]**Instant Feedback:** Real-time "Access Granted" or "Access Denied" visualization[cite: 284].
+* **Real-Time Acquisition:** Live streaming of cardiac data from the AD8232 sensor to Python via Serial communication.
+* **Signal Preprocessing:** Implementation of **Median Filtering (Kernel size: 5)** to remove baseline wander and muscle artifacts.
+* **Dynamic Normalization:** Standardizes signal amplitudes to ensuring accurate comparison regardless of sensor contact pressure].
+* **Correlation Algorithm:** Uses **Pearson Correlation Coefficients** to determine similarity scores with a strict threshold of **0.80**.
+* **Instant Feedback:** Real-time "Access Granted" or "Access Denied" visualization.
 
 ---
 
@@ -37,9 +37,9 @@ Leveraging an **Arduino Uno** for data acquisition and **Python** for complex si
 ### Hardware Components
 | Component | Specification | Function |
 | :--- | :--- | :--- |
-| **Microcontroller** | Arduino Uno (ATmega328P) | [cite_start]Analog-to-Digital conversion & transmission [cite: 263] |
-| **Sensor** | AD8232 Heart Rate Monitor | [cite_start]Captures bio-potential signals of the heart [cite: 265] |
-| **Electrodes** | Standard ECG Pads | [cite_start]3-Lead placement (RA, LA, RL) [cite: 267] |
+| **Microcontroller** | Arduino Uno (ATmega328P) | Analog-to-Digital conversion & transmission  |
+| **Sensor** | AD8232 Heart Rate Monitor | Captures bio-potential signals of the heart  |
+| **Electrodes** | Standard ECG Pads | 3-Lead placement (RA, LA, RL) |
 | **Connection** | USB / Serial | Data transmission to PC |
 
 ### Software & Libraries
@@ -48,13 +48,13 @@ Leveraging an **Arduino Uno** for data acquisition and **Python** for complex si
 * **Libraries:**
     * `pyserial` (Data transmission)
     * `numpy` (Numerical operations)
-    * [cite_start]`scipy` (Signal filtering - `medfilt`) [cite: 357]
+    * `scipy` (Signal filtering - `medfilt`) 
 
 ---
 
 ## ⚙️ Circuit Connection
 
-[cite_start]Connect the AD8232 Sensor to the Arduino Uno as follows[cite: 247, 248]:
+Connect the AD8232 Sensor to the Arduino Uno as follows:
 
 | AD8232 Pin | Arduino Pin |
 | :--- | :--- |
@@ -64,12 +64,12 @@ Leveraging an **Arduino Uno** for data acquisition and **Python** for complex si
 | **LO-** | Digital 11 |
 | **LO+** | Digital 10 |
 
-[cite_start]*(Note: Ensure electrodes are placed correctly: Red (RA), Yellow (LA), Green (RL/Ground) for optimal signal clarity.)* [cite: 288]
+*(Note: Ensure electrodes are placed correctly: Red (RA), Yellow (LA), Green (RL/Ground) for optimal signal clarity.)*
 
 ---
 
 ## 🚀 Installation & Usage
-
+   
 ### 1. Hardware Setup
 Assemble the circuit as per the table above. Connect the Arduino to your PC via USB.
 
